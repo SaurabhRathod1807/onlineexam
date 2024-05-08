@@ -1,0 +1,26 @@
+<body>
+
+    <form>
+
+        <fieldset>
+
+            <h2 style="color: green;">Reset Password</h2>
+
+        <label>Username</label> <input type="text" name="username" [(ngModel)]="username">
+
+        <label>Question</label><input type="text" name="question" [value]="passwordquestion">
+
+        <label>Answer</label><input type="text" name="answer" [(ngModel)]="passwordanswer">
+
+        <label *ngIf="show">Enter new password</label> <input type="text" name="password" [(ngModel)]="password"
+            *ngIf="show">
+
+        <input style="width: 150px;" type="button" value="updatePassword" (click)="updatepassword()" *ngIf="show">
+
+        <input style="width: 100px;" type="button" value="check" (click)="checking()">
+
+        <span style="color: red;font-size: 20px;">{{message}}</span>
+
+        </fieldset>
+    </form>
+</body>

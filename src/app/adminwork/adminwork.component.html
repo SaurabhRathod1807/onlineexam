@@ -1,0 +1,37 @@
+
+<span style="color:goldenrod; font-size: 30px;">{{message}} , {{username}}</span>
+
+<form>
+    Enter the Question Number:
+    <input type="number" name="QuestionNo"  [(ngModel)]="question.qno">
+    <br><br>
+    Enter The Subject:
+    <input type="text" name="subject"  [(ngModel)]="question.subject">
+    <br>
+    Enter the Question:
+    <input type="text" name="questionText"  [(ngModel)]="question.qtext">
+    <br>
+    Enter the option1:
+    <input type="text" name="option1"  [(ngModel)]="question.op1">
+    <br>
+    Enter the option2:
+    <input type="text" name="option2"  [(ngModel)]="question.op2">
+    <br>
+    Enter the option3:
+    <input type="text" name="option3"  [(ngModel)]="question.op3">
+    <br>
+    Enter the option4:
+    <input type="text" name="option4"  [(ngModel)]="question.op4">
+    <br>
+    Enter the Answer:
+    <input type="text" name="Answer"  [(ngModel)]="question.answer">
+    <br>
+    
+    <input type="button" value="AddQuestion" (click)="qsaveDB()">
+   
+    <br>
+    <input type="button" value="deletequestion" (click)="deletequestion()">
+    
+    
+    
+    </form>

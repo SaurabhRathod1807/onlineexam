@@ -1,0 +1,26 @@
+
+<span style="color: red;font-size: 30px;display: flex; align-items: center; justify-content: center;">{{message}}</span>
+<br><br>
+<form >
+    <h1 style="display: flex; align-items: center; justify-content: center;">ONLINE TEST</h1>
+    <h3 style="display: flex; align-items: center; justify-content: center;">Student Panel</h3>
+    <h3 style="display: flex; align-items: center; justify-content: center;">Please enter your email and password</h3>
+    Enter Your Username:
+    <input type="text" name="uaername" [(ngModel)]="user.username">
+    <br>
+    Enter Your password:
+    <input type="password" name="password"  [(ngModel)]="user.password">
+    <br>
+    Select The Subject:
+    <select  name="subject"  [(ngModel)]="subject">
+        <option *ngFor="let subjectname of subjects"  value="{{subjectname}}">{{subjectname}}</option>
+        
+    </select>
+
+    <input type="button" value="SingIn" (click)="check()">
+    
+    <input type="button" value="SingUp" (click)="showregister()">
+
+    <a href="checking" style="color: blue; font-size: 20px;">Forget password</a>
+
+</form>

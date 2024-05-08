@@ -1,0 +1,30 @@
+<h2>Register Here!</h2>
+<h2>Online Exam</h2>
+<form>
+
+    Enter Your UserName:
+    <input type="text" name="username" [(ngModel)]="user.username">
+    <br>
+    Enter Your Password:
+    <input type="password" name="password" [(ngModel)]="user.password"> 
+    <br>
+    Enter Your Mobile Number:
+    <input type="text" name="mobno" [(ngModel)]="user.mobno">
+    <br>
+    Enter your Email:
+    <input type="text" name="email" [(ngModel)]="user.email">
+    SecurityQuestion:
+    <input type="text" name="Question"  [value]="passwordquestion">
+    Enter Your Answer:
+    <input type="text" name="Answer" placeholder="Write your answer" [(ngModel)]="passwordanswer">
+
+<br>
+<br>
+<input type="button" value="SingUP" (click)="saveDB()">
+<br>
+<br>
+<input type="button" value="SingIn" (click)="loginhere()">
+
+
+</form>
+

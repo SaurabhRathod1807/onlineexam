@@ -1,0 +1,38 @@
+<html>
+    <body>
+        <b>Welcome,{{username}}</b>
+<span id="Examduration">{{durationMessage}}</span>
+
+<span id="decesertime">The Tmie Remaining for Question to End, {{maxtime}}</span>
+<br>
+
+<input type="button" *ngFor="let qno of allqnos" [value]="qno" (click)="getquestion($event)">
+
+<form name="questionForm">
+            <input type="text" name="qno" [value]="question.qno"><br><br>
+
+            <input type="text" name="qtext" [value]="question.qtext" size="50"><br><br>
+
+            <br><br>
+
+            <input  name="option" type="radio" [checked]="isChecked(question.op1)" (change)="saveAnswer()" [value]="question.op1" [(ngModel)]="submittedAnswer" class="css-checkbox" name="radioModel" [(ngModel)]="selected"><span [style.color]="getColor(question.op1)">{{question.op1}}</span><br><br>
+            <input  name="option" type="radio" [checked]="isChecked(question.op2)" (change)="saveAnswer()" [value]="question.op2" [(ngModel)]="submittedAnswer" class="css-checkbox" name="radioModel" [(ngModel)]="selected"><span [style.color]="getColor(question.op2)">{{question.op2}}</span><br><br>
+            <input  name="option" type="radio" [checked]="isChecked(question.op3)" (change)="saveAnswer()" [value]="question.op3" [(ngModel)]="submittedAnswer" class="css-checkbox" name="radioModel" [(ngModel)]="selected"><span [style.color]="getColor(question.op3)">{{question.op3}}</span><br><br>
+            <input  name="option" type="radio" [checked]="isChecked(question.op4)" (change)="saveAnswer()" [value]="question.op4" [(ngModel)]="submittedAnswer" class="css-checkbox" name="radioModel" [(ngModel)]="selected"><span [style.color]="getColor(question.op4)">{{question.op4}}</span><br><br>
+
+            <input type="hidden" name="correctAnswer" [(ngModel)]="question.answer"><br><br>
+
+            <!-- <input  name="option" type="radio" [value]="question.op1" ><span>{{question.op1}}</span><br><br>
+            <input  name="option" type="radio" [value]="question.op2" ><span>{{question.op2}}</span><br><br>
+            <input  name="option" type="radio" [value]="question.op3" ><span>{{question.op3}}</span><br><br>
+            <input  name="option" type="radio" [value]="question.op4" ><span>{{question.op4}}</span><br><br> -->
+
+            <input type="button" value="Previous" (click)="previousquestion()">
+            <input type="button" value="Next" (click)="nextquestion()">
+            <input type="button" value="EndExam" (click)="endexam()"> 
+
+
+        </form>
+
+    </body>
+</html>

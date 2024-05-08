@@ -1,0 +1,25 @@
+
+<h2>Admin Registation Here!</h2>
+<h2>Online Exam Portal</h2>
+<form>
+
+    Enter Your UserName:
+    <input type="text" name="username" [(ngModel)]="adminuser.username">
+    <br>
+    Enter Your Password:
+    <input type="password" name="password" [(ngModel)]="adminuser.password"> 
+    <br>
+    Enter Your Mobile Number:
+    <input type="text" name="mobno" [(ngModel)]="adminuser.mobno">
+    <br>
+    Enter your Email:
+    <input type="text" name="email" [(ngModel)]="adminuser.email">
+<br>
+<br>
+<input type="button" value="AdminSingUp" (click)="adminsave()">
+<br>
+<input type="button" value="AdminSingIn" (click)="login()">
+
+
+</form>
+

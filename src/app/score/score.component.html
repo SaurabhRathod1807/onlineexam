@@ -1,0 +1,21 @@
+<p style=" color: red;">The Score Of Exam is : {{score}}</p>
+
+<table>
+    <tr>
+        <th>qno</th>
+        <th>Question</th>
+        <th>submittedAnswer</th>
+        <th>correctAnswer</th>
+    </tr>
+
+    <tr *ngFor="let answer of allAnswer" [style.background]="getColor(answer.submittedAnswer,answer.correctAnswer)">
+            <td>{{answer.qno}}</td>
+
+            <td>{{answer.qtext}}</td>
+
+            <td>{{answer.submittedAnswer}}</td>
+
+            <td>{{answer.correctAnswer}}</td>
+    </tr>
+
+</table>
